@@ -30,6 +30,8 @@ const ImageWrapper = styled.div`
   @media (min-width: 700px) {
     margin-left: 3em;
   }
+  border: 1em solid white;
+  border-radius: 1em;
 `
 
 const Header = styled.header`
