@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import profilePic from './images/profile-pic.jpg'
+import profilePic from './images/profile-pic2.jpg'
 import bg from './images/bg.jpg'
+import { Image } from 'semantic-ui-react'
 
 const Layout = styled.div`
   padding: 1em;
@@ -20,18 +21,10 @@ const Layout = styled.div`
   }
 `
 
-const Img = styled.img`
-  width: 240px;
-  height: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
-`
-
 const ImageWrapper = styled.div`
   @media (min-width: 700px) {
     margin-left: 3em;
   }
-  border: 1em solid white;
-  border-radius: 1em;
 `
 
 const Header = styled.header`
@@ -53,7 +46,7 @@ class App extends Component {
           <SpecialHeader>欢迎来到林鸿博的网站</SpecialHeader>
         </Header>
         <ImageWrapper>
-          <Img src={profilePic} />
+          <Image src={profilePic} size='medium' circular />
         </ImageWrapper>
       </Layout>
     );
