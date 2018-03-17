@@ -6,13 +6,20 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 1.5em;
+  background: radial-gradient(
+    circle,
+    SkyBlue,
+    SkyBlue 50%,
+    LightCyan 50%,
+    SkyBlue
+  );
 `;
 
 const Grid = styled.div`
-  @media all and (min-width: 768px){
+  @media all and (min-width: 768px) {
     display: grid;
-    grid-template-columns: auto auto
-    grid-gap: 1em
+    grid-template-columns: auto auto;
+    grid-gap: 1em;
   }
 `;
 
@@ -47,7 +54,8 @@ function checkHowManyDaysTowardsYourNextBirth(birthday) {
 
 class Page extends PureComponent {
   state = {
-    counter: 0
+    counter: 0,
+    currentTime: ""
   };
 
   componentDidMount() {
@@ -56,7 +64,8 @@ class Page extends PureComponent {
       const age = checkYourAgeInYears("06/09/2010");
 
       this.setState({
-        counter: age
+        counter: age,
+        currentTime: `${new Date()}`
       });
     }, 1000);
   }
@@ -113,6 +122,7 @@ class Page extends PureComponent {
               <Card.Header>How old am I?</Card.Header>
               <Card.Description>
                 I am {this.state.counter} years old<br />
+                <div>Current Time: {this.state.currentTime}</div>
               </Card.Description>
             </Card.Content>
           </Card>
