@@ -8,7 +8,7 @@ import { Image } from 'semantic-ui-react'
 
 const Layout = styled.div`
   padding: 1em;
-  height: 240px;
+  height: 420px;
 
   display: flex;
   flex-wrap: wrap;
@@ -19,6 +19,7 @@ const Layout = styled.div`
 
   @media (min-width: 700px) {
     align-items: center;
+      height: 240px;
   }
 `
 
