@@ -23,6 +23,10 @@ const Grid = styled.div`
   }
 `;
 
+const card = styled.div`
+  background-color: blue;
+`;
+
 const TIMESTAMP_OFFSET = 1000;
 const DAYS_IN_YEAR = 365;
 const HOURS_IN_DAY = 24;
