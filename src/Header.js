@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import profilePic from './images/profile-pic2.jpg'
-import bg from './images/bg.jpg'
-import { Image } from 'semantic-ui-react'
+import profilePic from "./images/profile-pic2.jpg";
+import bg from "./images/bg.jpg";
+import { Image } from "semantic-ui-react";
 
 const Layout = styled.div`
   padding: 1em;
@@ -21,22 +21,22 @@ const Layout = styled.div`
     align-items: center;
       height: 240px;
   }
-`
+`;
 
 const ImageWrapper = styled.div`
   @media (min-width: 700px) {
     margin-left: 3em;
   }
-`
+`;
 
 const Header = styled.header`
   text-align: center;
-  color: white;
-`
+  color: red;
+`;
 
 const SpecialHeader = styled.h2`
-  font-family: 'Mina', sans-serif;
-`
+  font-family: "Mina", sans-serif;
+`;
 
 const Page = () => (
   <Layout>
@@ -46,9 +46,9 @@ const Page = () => (
       <SpecialHeader>欢迎来到林鸿博的网站</SpecialHeader>
     </Header>
     <ImageWrapper>
-      <Image src={profilePic} size='small' circular />
+      <Image src={profilePic} size="small" circular />
     </ImageWrapper>
   </Layout>
-)
+);
 
-export default Page
+export default Page;

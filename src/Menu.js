@@ -1,35 +1,34 @@
 import React from "react";
 import styled from "styled-components";
 
-const style = styled.div`
-  background: radial-gradient(
-    circle,
-    SkyBlue,
-    SkyBlue 50%,
-    LightCyan 50%,
-    SkyBlue
-  );
+const Everything = styled.div`
+  background: radial-gradient(circle, orange, orange 50%, yellow 50%, orange);
+`;
+const Text = styled.a`
+  color: lightgreen;
 `;
 
 const Menu = () => {
   return (
-    <div>
+    <Everything>
       <ul>
         <li>
-          <a href="Menu.js">Home</a>
+          <Text href="Menu.js">Home</Text>
         </li>
       </ul>
       <ul>
         <li>
-          <a href="/Users/boblam/Projects">Projects</a>
+          <Text href="/Users/boblam/Projects">Projects</Text>
         </li>
       </ul>
       <ul>
         <li>
-          <a href="/Users/boblam/Projects/boblam.ceo/src/images">Gallery</a>
+          <Text href="/Users/boblam/Projects/boblam.ceo/src/images">
+            Gallery
+          </Text>
         </li>
       </ul>
-    </div>
+    </Everything>
   );
 };
 
