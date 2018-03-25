@@ -5,6 +5,8 @@ import { Flex, Box } from "reflexbox";
 import styled from "styled-components";
 import back from "./images/back.jpg";
 import champion from "./images/champion.jpg";
+import seceret from "./images/code.JPG";
+import r2d2 from "./images/r2d2.jpg";
 
 const IMAGE_WIDTH = 350;
 
@@ -21,6 +23,8 @@ const Gallery = () => (
     <img src={champion} width={`${IMAGE_WIDTH}px`} />
     <img src={me} width={`${IMAGE_WIDTH}px`} />
     <img src={back} width={`${IMAGE_WIDTH}px`} />
+    <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
+    <img src={seceret} width={`${IMAGE_WIDTH}px`} />
   </Everything>
 );
 export default Gallery;
