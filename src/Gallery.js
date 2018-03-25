@@ -5,7 +5,6 @@ import me from "./images/me-doing-the-computer.jpg";
 import { Flex, Box } from "reflexbox";
 import styled from "styled-components";
 import back from "./images/back.jpg";
-import video from "./images/99.mp4";
 
 const IMAGE_WIDTH = 350;
 
