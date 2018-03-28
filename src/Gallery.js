@@ -9,6 +9,8 @@ import seceret from "./images/code.JPG";
 import r2d2 from "./images/r2d2.jpg";
 import Iframe from "react-iframe";
 import video from "./99.mp4";
+import avideo from "./90.mp4";
+import anothervideo from "./90.mp4";
 
 const IMAGE_WIDTH = 350;
 
@@ -29,6 +31,26 @@ const Gallery = () => (
     <img src={seceret} width={`${IMAGE_WIDTH}px`} />
     <Iframe
       url={video}
+      width="450px"
+      height="450px"
+      id="myId"
+      className="myClassname"
+      display="initial"
+      position="relative"
+      allowFullScreen
+    />
+    <Iframe
+      url={avideo}
+      width="450px"
+      height="450px"
+      id="myId"
+      className="myClassname"
+      display="initial"
+      position="relative"
+      allowFullScreen
+    />
+    <Iframe
+      url={anothervideo}
       width="450px"
       height="450px"
       id="myId"
