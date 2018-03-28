@@ -10,7 +10,7 @@ import r2d2 from "./images/r2d2.jpg";
 import Iframe from "react-iframe";
 import video from "./99.mp4";
 import avideo from "./90.mp4";
-import anothervideo from "./90.mp4";
+import anothervideo from "./teakwando.mp4";
 
 const IMAGE_WIDTH = 350;
 
