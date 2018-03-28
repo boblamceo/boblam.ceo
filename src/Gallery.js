@@ -7,6 +7,8 @@ import back from "./images/back.jpg";
 import champion from "./images/champion.jpg";
 import seceret from "./images/code.JPG";
 import r2d2 from "./images/r2d2.jpg";
+import Iframe from "react-iframe";
+import video from "./99.mp4";
 
 const IMAGE_WIDTH = 350;
 
@@ -25,6 +27,16 @@ const Gallery = () => (
     <img src={back} width={`${IMAGE_WIDTH}px`} />
     <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
     <img src={seceret} width={`${IMAGE_WIDTH}px`} />
+    <Iframe
+      url={video}
+      width="450px"
+      height="450px"
+      id="myId"
+      className="myClassname"
+      display="initial"
+      position="relative"
+      allowFullScreen
+    />
   </Everything>
 );
 export default Gallery;
