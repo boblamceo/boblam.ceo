@@ -41,7 +41,7 @@ const Otherr = styled.div`
 `;
 
 const Weird = styled.div`
-  color: #f8ecc2;
+  color: orange;
 `;
 
 const TIMESTAMP_OFFSET = 1000;
