@@ -29,25 +29,21 @@ const Gallery = () => (
     <img src={back} width={`${IMAGE_WIDTH}px`} />
     <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
     <img src={seceret} width={`${IMAGE_WIDTH}px`} />
-    <Iframe
-      url={video}
-      width="450px"
-      height="450px"
-      id="myId"
-      display="initial"
-      position="relative"
-      allowFullScreen
-    />
-    <Iframe
-      url={avideo}
-      width="450px"
-      height="450px"
-      id="my2id"
-      display="initial"
-      position="relative"
-      allowFullScreen
-    />
-    <video width="450" controls>
+
+    <br />
+
+    <video width="100%" controls>
+      <source src={video} type="video/mp4" />
+    </video>
+
+    <br />
+
+    <video width="100%" controls>
+      <source src={avideo} type="video/mp4" />
+    </video>
+    <br />
+
+    <video width="100%" controls>
       <source src={anothervideo} type="video/mp4" />
     </video>
   </Everything>

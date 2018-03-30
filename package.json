@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "npm": "^5.8.0",
+    "pell": "^1.0.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-iframe": "^1.1.0",
