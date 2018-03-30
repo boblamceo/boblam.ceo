@@ -2,4 +2,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+  background: radial-gradient(circle, orange, orange 50%, yellow 50%, orange);
 }

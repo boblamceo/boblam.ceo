@@ -34,7 +34,6 @@ const Gallery = () => (
       width="450px"
       height="450px"
       id="myId"
-      className="myClassname"
       display="initial"
       position="relative"
       allowFullScreen
@@ -43,22 +42,14 @@ const Gallery = () => (
       url={avideo}
       width="450px"
       height="450px"
-      id="myId"
-      className="myClassname"
+      id="my2id"
       display="initial"
       position="relative"
       allowFullScreen
     />
-    <Iframe
-      url={anothervideo}
-      width="450px"
-      height="450px"
-      id="myId"
-      className="myClassname"
-      display="initial"
-      position="relative"
-      allowFullScreen
-    />
+    <video width="450" controls>
+      <source src={anothervideo} type="video/mp4" />
+    </video>
   </Everything>
 );
 export default Gallery;
