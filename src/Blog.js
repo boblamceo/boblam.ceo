@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { Card } from "semantic-ui-react";
 import styled, { injectGlobal } from "styled-components";
 import { init } from "pell";
-
+import { Input } from "semantic-ui-react";
 import smart from "./images/smart.jpg";
 import oldGuy from "./images/old-man.jpg";
+import { Button } from "semantic-ui-react";
 
 injectGlobal`
   .pell-content {
@@ -18,16 +19,24 @@ const Everything = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `;
 
 const TextEditor = styled.div`
   background-color: white;
   padding: 1em;
   border-radius: 5px;
-  max-width: 80%;
+  width: 400px;
 `;
 
 class Blog extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: ""
+    };
+    this.onTitleChange = this.onTitleChange.bind(this);
+  }
   componentDidMount() {
     const editor = init({
       element: document.getElementById("pell"),
@@ -38,10 +47,40 @@ class Blog extends Component {
     });
   }
 
+  onTitleChange = e => {
+    const title = e.target.value;
+    this.setState({
+      title
+    });
+  };
+
+  onDescriptionChange(e) {
+    const description = e.target.value;
+  }
+
   render() {
     return (
       <Everything>
-        <TextEditor id="pell" />
+        <TextEditor>
+          <Input
+            focus
+            placeholder="Title..."
+            onChange={this.onTitleChange}
+            value={this.state.title}
+            fluid
+          />
+          <div id="pell" />
+        </TextEditor>
+        <div>
+          <Card
+            image={smart}
+            header={this.state.title}
+            meta={new Date()}
+            description={this.state.description}
+          />
+          <Button content="Submit" primary />
+        </div>
+
         <Card
           image={smart}
           header="How to learn things super fast?"
