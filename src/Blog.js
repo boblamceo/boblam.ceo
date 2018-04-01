@@ -41,6 +41,7 @@ class Blog extends Component {
     const editor = init({
       element: document.getElementById("pell"),
       onChange: html => {
+        console.info("html", html);
         // document.getElementById("html-output").textContent = html;
       },
       actions: ["bold", "italic", "heading1", "heading2", "olist", "ulist"]
@@ -53,10 +54,6 @@ class Blog extends Component {
       title
     });
   };
-
-  onDescriptionChange(e) {
-    const description = e.target.value;
-  }
 
   render() {
     return (

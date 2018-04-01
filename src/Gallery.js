@@ -11,6 +11,10 @@ import Iframe from "react-iframe";
 import video from "./99.mp4";
 import avideo from "./90.mp4";
 import anothervideo from "./teakwando.mp4";
+import firstGuy from "./images/first-guy-on-here.jpg";
+import smile from "./images/smile-on-mountain.jpg";
+import weather from "./images/checking-the-weather.jpg";
+import intro from "./images/intro-to-this-place.mp4";
 
 const IMAGE_WIDTH = 350;
 
@@ -29,22 +33,30 @@ const Gallery = () => (
     <img src={back} width={`${IMAGE_WIDTH}px`} />
     <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
     <img src={seceret} width={`${IMAGE_WIDTH}px`} />
+    <img src={smile} width={`${IMAGE_WIDTH}px`} />
+    <img src={weather} width={`${IMAGE_WIDTH}px`} />
 
     <br />
 
-    <video width="100%" controls>
+    <video width="30%" controls>
       <source src={video} type="video/mp4" />
     </video>
 
     <br />
 
-    <video width="100%" controls>
+    <video width="30%" controls>
       <source src={avideo} type="video/mp4" />
     </video>
     <br />
 
-    <video width="100%" controls>
+    <video width="30%" controls>
       <source src={anothervideo} type="video/mp4" />
+    </video>
+
+    <br />
+
+    <video width="30%" controls>
+      <source src={intro} type="video/mp4" />
     </video>
   </Everything>
 );
