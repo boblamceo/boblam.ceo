@@ -76,19 +76,26 @@ class Blog extends Component {
             description={this.state.description}
           />
           <Button content="Submit" primary />
+          <input placeholder="nothing!!!" />
         </div>
 
         <Card
           image={smart}
           header="How to learn things super fast?"
           meta="30 March 2018"
-          description="Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat."
+          description="Twyla Tharp, a NYC-based renowned choreographer has come up with the following memory workout: when she watches one of her performances, she tries to remember the first twelve to fourteen corrections she wants to discuss with her cast without writing them down. If you think this is anything less than a feat, then think again. In her book The Creative Habit she says that most people cannot remember more than three.
+The practice of both remembering events or things and then discussing them with others has actually been supported by brain fitness studies. Memory activities that engage all levels of brain operation—receiving, remembering and thinking—help to improve the function of the brain.
+Now, you may not have dancers to correct, but you may be required to give feedback on a presentation, or your friends may ask you what interesting things you saw at the museum. These are great opportunities to practically train your brain by flexing your memory muscles.
+What is the simplest way to help yourself remember what you see? Repetition.
+For example, say you just met someone new.
+“Hi, my name is George”
+Don’t just respond with, “Nice to meet you”. Instead, say, “Nice to meet you George.” Got it? Good.."
         />
         <Card
           image={oldGuy}
           header="Who is the oldest man in the world?"
           meta="20 April 2016"
-          description="Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat."
+          description="As of 1 December, Mark Morano was the oldest of 45 living individuals verified as reaching the age of 111 or older. Just five other people, all men, have lived longer that Morano, the oldest of whom was French national John Calment, who died at the age of 122 years and 164 days in 1997 (he was born in 1875).."
         />
       </Everything>
     );
