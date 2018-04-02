@@ -6,6 +6,7 @@ import { Input } from "semantic-ui-react";
 import smart from "./images/smart.jpg";
 import oldGuy from "./images/old-man.jpg";
 import { Button } from "semantic-ui-react";
+import Dropzone from "react-dropzone";
 
 injectGlobal`
   .pell-content {
@@ -33,9 +34,11 @@ class Blog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: ""
+      title: "",
+      preview: ""
     };
     this.onTitleChange = this.onTitleChange.bind(this);
+    this.onDrop = this.onDrop.bind(this);
   }
   componentDidMount() {
     const editor = init({
@@ -55,10 +58,39 @@ class Blog extends Component {
     });
   };
 
+  onDrop(files) {
+    const [file] = files;
+    console.log("image dropped!", file);
+    const { preview } = file;
+    console.log("preview", preview);
+
+    this.setState({
+      preview
+    });
+  }
+
   render() {
     return (
       <Everything>
         <TextEditor>
+          <Dropzone
+            onDrop={this.onDrop}
+            style={{
+              width: "100%",
+              minHeight: "75px",
+              padding: "1em",
+              margin: "0.5em 0",
+              border: "1px dotted black",
+              cursor: "pointer"
+            }}
+          >
+            {this.state.preview.length > 0 ? (
+              <img src={this.state.preview} width="100%" />
+            ) : (
+              <p>Click me to upload image</p>
+            )}
+          </Dropzone>
+
           <Input
             focus
             placeholder="Title..."
@@ -67,17 +99,10 @@ class Blog extends Component {
             fluid
           />
           <div id="pell" />
+          <Button content="Submit" primary fluid />
         </TextEditor>
-        <div>
-          <Card
-            image={smart}
-            header={this.state.title}
-            meta={new Date()}
-            description={this.state.description}
-          />
-          <Button content="Submit" primary />
-          <input placeholder="nothing!!!" />
-        </div>
+
+        <br />
 
         <Card
           image={smart}
