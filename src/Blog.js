@@ -108,13 +108,7 @@ class Blog extends Component {
           image={smart}
           header="How to learn things super fast?"
           meta="30 March 2018"
-          description="Twyla Tharp, a NYC-based renowned choreographer has come up with the following memory workout: when she watches one of her performances, she tries to remember the first twelve to fourteen corrections she wants to discuss with her cast without writing them down. If you think this is anything less than a feat, then think again. In her book The Creative Habit she says that most people cannot remember more than three.
-The practice of both remembering events or things and then discussing them with others has actually been supported by brain fitness studies. Memory activities that engage all levels of brain operation—receiving, remembering and thinking—help to improve the function of the brain.
-Now, you may not have dancers to correct, but you may be required to give feedback on a presentation, or your friends may ask you what interesting things you saw at the museum. These are great opportunities to practically train your brain by flexing your memory muscles.
-What is the simplest way to help yourself remember what you see? Repetition.
-For example, say you just met someone new.
-“Hi, my name is George”
-Don’t just respond with, “Nice to meet you”. Instead, say, “Nice to meet you George.” Got it? Good.."
+          description="Eat alot of dark chocolate, dark chocolate has alot of stuff to keep you smart. Like me, I'm the only one doing real life coding. "
         />
         <Card
           image={oldGuy}
