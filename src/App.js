@@ -1,29 +1,24 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Sound from "react-sound";
+
 import Header from "./Header";
 import Menu from "./Menu";
-import ReactMusicPlayer from 'react-music-player';
-
-var songs = [
-  {
-    url: 'Believer.mp3',
-    cover: 'path/to/jpeg',
-    artist: {
-      name: 'Metallica',
-      song: 'Believer'
-    }
-  },
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <ReactMusicPlayer songs={songs} autoplay />
+      <div>
+        <Sound
+          url="/believer.mp3"
+          playStatus={Sound.status.PLAYING}
+          playFromPosition={300 /* in milliseconds */}
+        />
         <Header />
         <Menu />
-      </Container>
+      </div>
     );
   }
-},
+}
 
 export default App;

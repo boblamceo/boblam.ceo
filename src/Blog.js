@@ -7,6 +7,7 @@ import smart from "./images/smart.jpg";
 import oldGuy from "./images/old-man.jpg";
 import { Button } from "semantic-ui-react";
 import Dropzone from "react-dropzone";
+import axios from "axios";
 
 injectGlobal`
   .pell-content {
@@ -35,19 +36,28 @@ class Blog extends Component {
     super(props);
     this.state = {
       title: "",
-      preview: ""
+      preview: "",
+      content: ""
     };
     this.onTitleChange = this.onTitleChange.bind(this);
     this.onDrop = this.onDrop.bind(this);
   }
+
   componentDidMount() {
     const editor = init({
       element: document.getElementById("pell"),
       onChange: html => {
         console.info("html", html);
+        this.setState({
+          content: html
+        });
         // document.getElementById("html-output").textContent = html;
       },
       actions: ["bold", "italic", "heading1", "heading2", "olist", "ulist"]
+    });
+
+    axios.get("http://localhost:8080/article").then(data => {
+      console.info("data", data);
     });
   }
 
@@ -69,7 +79,24 @@ class Blog extends Component {
     });
   }
 
+  onSubmitBlog = () => {
+    // do something here
+    axios
+      .post("http://localhost:8080/article", {
+        title: this.state.title,
+        content: this.state.content
+      })
+      .then(function(response) {
+        console.log(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  };
+
   render() {
+    console.info("this.state.title", this.state.title);
+    console.info("this.state.content", this.state.content);
     return (
       <Everything>
         <TextEditor>
@@ -99,7 +126,7 @@ class Blog extends Component {
             fluid
           />
           <div id="pell" />
-          <Button content="Submit" primary fluid />
+          <Button content="Submit" primary fluid onClick={this.onSubmitBlog} />
         </TextEditor>
 
         <br />
