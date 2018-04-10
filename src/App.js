@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Sound } from "react-sound";
+import Sound from "react-sound";
 
 import Header from "./Header";
 import Menu from "./Menu";
+
+console.info("Sound", Sound);
 
 class App extends Component {
   render() {
