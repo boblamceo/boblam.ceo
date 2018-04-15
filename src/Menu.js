@@ -7,6 +7,7 @@ import Home from "./Home";
 import Project from "./Project";
 import Gallery from "./Gallery";
 import Blog from "./Blog";
+import Write from "./Write";
 
 const Everything = styled.div``;
 const Text = styled.a`
@@ -42,6 +43,7 @@ const Menu = () => {
         <Route path="/projects" component={Project} />
         <Route path="/gallery" component={Gallery} />
         <Route path="/blog" component={Blog} />
+        <Route path="/write" component={Write} />
       </Everything>
     </Router>
   );

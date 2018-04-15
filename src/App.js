@@ -1,25 +1,25 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Sound from "react-sound";
+
+import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
 
 import Header from "./Header";
 import Menu from "./Menu";
 
-console.info("Sound", Sound);
+const client = new ApolloClient({
+  uri: "https://api.graph.cool/simple/v1/cjfwgf3444jik0120rjd1hp62"
+});
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Sound
-          url="/believer.mp3"
-          playStatus={Sound.status.PLAYING}
-          playFromPosition={300 /* in milliseconds */}
-          Loop={true}
-        />
-        <Header />
-        <Menu />
-      </div>
+      <ApolloProvider client={client}>
+        <div>
+          <Header />
+          <Menu />
+        </div>
+      </ApolloProvider>
     );
   }
 }
