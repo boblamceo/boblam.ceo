@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
 `;
+
 const TextEditor = styled.div`
   background-color: white;
   padding: 1em;
@@ -77,7 +78,6 @@ class Write extends Component {
     const renderedHTML = mediumDraftExporter(
       this.state.editorState.getCurrentContent()
     );
-    console.info("renderedHTML", renderedHTML);
 
     createArticle({
       variables: {
@@ -85,6 +85,8 @@ class Write extends Component {
         content: renderedHTML,
         title: this.state.title
       }
+    }).then(() => {
+      this.props.history.push("/blog");
     });
   };
 

@@ -1,7 +1,6 @@
 import React from "react";
 import certificate from "./images/certificate-of-participation.png";
 import me from "./images/me-doing-the-computer.jpg";
-import { Flex, Box } from "reflexbox";
 import styled from "styled-components";
 import back from "./images/back.jpg";
 import champion from "./images/champion.jpg";
