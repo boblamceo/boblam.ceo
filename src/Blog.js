@@ -60,6 +60,20 @@ class Blog extends Component {
 
           console.log(allArticles);
 
+          const confirmArticle = function(answer) {
+            document
+              .getElementById("confirmClickActionElementId")
+              .addEventListener("click", function() {
+                return prompt("do you really want to do this (Y/ n)");
+                if (answer == "Y") {
+                  return this.deleteArticle;
+                }
+                const deleteArticle = (mutation, articleId) => {
+                  mutation(articleId);
+                };
+              });
+          };
+
           return (
             <Everything>
               <br />
@@ -82,8 +96,9 @@ class Blog extends Component {
                             return (
                               <Icon
                                 name="cancel"
-                                size="medium"
-                                onClick={deleteArticle}
+                                size="large"
+                                onClick={confirmArticle}
+                                id="confirmClickActionElementId"
                               />
                             );
                           }}
