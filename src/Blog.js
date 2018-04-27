@@ -66,10 +66,10 @@ class Blog extends Component {
               .addEventListener("click", function() {
                 return prompt("do you really want to do this (Y/ n)");
                 if (answer == "Y") {
-                  return this.deleteArticle;
+                  return this.deleteArticle();
                 }
                 const deleteArticle = (mutation, articleId) => {
-                  mutation(articleId);
+                  mutation(deleteArticle.articleId);
                 };
               });
           };

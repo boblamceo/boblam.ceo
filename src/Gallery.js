@@ -14,6 +14,7 @@ import firstGuy from "./images/first-guy-on-here.jpg";
 import smile from "./images/smile-on-mountain.jpg";
 import weather from "./images/checking-the-weather.jpg";
 import intro from "./images/intro-to-this-place.mp4";
+import yoga from "./images/yoga.mp4";
 
 const IMAGE_WIDTH = 350;
 
@@ -56,6 +57,12 @@ const Gallery = () => (
 
     <video width="30%" controls>
       <source src={intro} type="video/mp4" />
+    </video>
+
+    <br />
+
+    <video width="30%" controls>
+      <source src={yoga} type="video/mp4" />
     </video>
   </Everything>
 );
