@@ -61,7 +61,7 @@ const Gallery = () => (
 
     <br />
 
-    <video width="30%" controls>
+    <video width="70%" controls>
       <source src={yoga} type="video/mp4" />
     </video>
   </Everything>
