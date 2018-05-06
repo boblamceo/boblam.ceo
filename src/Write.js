@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Input, Button } from "semantic-ui-react";
-import { init } from "pell";
 import styled from "styled-components";
 import Dropzone from "react-dropzone";
 import gql from "graphql-tag";
