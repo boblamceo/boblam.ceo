@@ -15,6 +15,7 @@ import smile from "./images/smile-on-mountain.jpg";
 import weather from "./images/checking-the-weather.jpg";
 import intro from "./images/intro-to-this-place.mp4";
 import yoga from "./images/yoga.mp4";
+import teaching from "./teaching.mp4";
 
 const IMAGE_WIDTH = 350;
 
@@ -27,16 +28,23 @@ const Everything = styled.div`
 
 const Gallery = () => (
   <Everything>
+    <h1>Bloomberg Certificate</h1>
     <img src={certificate} width={`${IMAGE_WIDTH}px`} />
-    <img src={champion} width={`${IMAGE_WIDTH}px`} />
-    <img src={me} width={`${IMAGE_WIDTH}px`} />
-    <img src={back} width={`${IMAGE_WIDTH}px`} />
-    <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
-    <img src={seceret} width={`${IMAGE_WIDTH}px`} />
-    <img src={smile} width={`${IMAGE_WIDTH}px`} />
-    <img src={weather} width={`${IMAGE_WIDTH}px`} />
 
     <br />
+
+    <h1>Robotics</h1>
+    <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
+
+    <br />
+
+    <h1>Secret stuff</h1>
+
+    <img src={seceret} width={`${IMAGE_WIDTH}px`} />
+
+    <br />
+
+    <h1>Chinese</h1>
 
     <video width="30%" controls>
       <source src={video} type="video/mp4" />
@@ -44,14 +52,25 @@ const Gallery = () => (
 
     <br />
 
-    <video width="30%" controls>
-      <source src={avideo} type="video/mp4" />
-    </video>
+    <h1>Teakwando</h1>
+
+    <img src={champion} width={`${IMAGE_WIDTH}px`} />
+
     <br />
 
     <video width="30%" controls>
       <source src={anothervideo} type="video/mp4" />
     </video>
+
+    <br />
+
+    <h1>Climbing Mountain</h1>
+
+    <img src={smile} width={`${IMAGE_WIDTH}px`} />
+
+    <br />
+
+    <img src={weather} width={`${IMAGE_WIDTH}px`} />
 
     <br />
 
@@ -61,8 +80,30 @@ const Gallery = () => (
 
     <br />
 
+    <img src={back} width={`${IMAGE_WIDTH}px`} />
+
+    <h1>Yoga</h1>
+
     <video width="70%" controls>
       <source src={yoga} type="video/mp4" />
+    </video>
+
+    <br />
+
+    <h1>Coding</h1>
+
+    <img src={me} width={`${IMAGE_WIDTH}px`} />
+
+    <br />
+
+    <video width="30%" controls>
+      <source src={teaching} type="video/mp4" />
+    </video>
+
+    <br />
+
+    <video width="30%" controls>
+      <source src={avideo} type="video/mp4" />
     </video>
   </Everything>
 );

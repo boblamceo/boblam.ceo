@@ -47,32 +47,52 @@ const Title = styled.h3`
   padding: 1em;
 `;
 
+const Cursor = styled.div`
+  cursor: pointer;
+`;
+
 class Blog extends Component {
+  confirmDelete = (mutation, articleId) => {
+    /* eslint-disable no-restricted-globals */
+    const answer = confirm("Do u really want to do delete this article?");
+    console.log(answer);
+
+    if (answer) {
+      mutation(articleId)
+        .then(response => {
+          console.log("response", response);
+          window.location.reload();
+        })
+        .catch(error => {
+          console.log("error", error);
+        });
+    }
+
+    // if(answer){
+    //   return
+    // }
+    // document
+    //   .getElementById("confirmClickActionElementId")
+    //   .addEventListener("click", function() {
+    //     return prompt("do you really want to do this (Y/ n)");
+    //     if (answer == "Y") {
+    //       return this.deleteArticle();
+    //     }
+    //     const deleteArticle = (mutation, articleId) => {
+    //       mutation(deleteArticle.articleId);
+    //     };
+    //   });
+  };
+
   render() {
     return (
       <Query query={LIST_ARTICLES_QUERY}>
         {({ loading, error, data }) => {
-          if (loading) {
+          if (loading || !data) {
             return <div>Loading...</div>;
           }
 
           const { allArticles } = data;
-
-          console.log(allArticles);
-
-          const confirmArticle = function(answer) {
-            document
-              .getElementById("confirmClickActionElementId")
-              .addEventListener("click", function() {
-                return prompt("do you really want to do this (Y/ n)");
-                if (answer == "Y") {
-                  return this.deleteArticle();
-                }
-                const deleteArticle = (mutation, articleId) => {
-                  mutation(deleteArticle.articleId);
-                };
-              });
-          };
 
           return (
             <Everything>
@@ -94,12 +114,19 @@ class Blog extends Component {
                         >
                           {deleteArticle => {
                             return (
-                              <Icon
-                                name="cancel"
-                                size="large"
-                                onClick={confirmArticle}
-                                id="confirmClickActionElementId"
-                              />
+                              <Cursor>
+                                <Icon
+                                  name="cancel"
+                                  size="large"
+                                  onClick={() =>
+                                    this.confirmDelete(
+                                      deleteArticle,
+                                      article.id
+                                    )
+                                  }
+                                  id="confirmClickActionElementId"
+                                />
+                              </Cursor>
                             );
                           }}
                         </Mutation>

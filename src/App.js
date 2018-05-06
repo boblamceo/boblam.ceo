@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
