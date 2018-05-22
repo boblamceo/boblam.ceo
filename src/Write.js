@@ -37,11 +37,28 @@ const CREATE_ARTICLE_MUTATION = gql`
   }
 `;
 
+function toDataURL(src, callback) {
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onload = function() {
+    var fileReader = new FileReader();
+    fileReader.onloadend = function() {
+      callback(fileReader.result);
+    };
+    fileReader.readAsDataURL(xhttp.response);
+  };
+
+  xhttp.responseType = "blob";
+  xhttp.open("GET", src, true);
+  xhttp.send();
+}
+
 class Write extends Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "",
+      image: "",
       preview: "",
       content: "",
       editorState: createEditorState()
@@ -65,10 +82,22 @@ class Write extends Component {
     const [file] = files;
     console.log("image dropped!", file);
     const { preview } = file;
-    console.log("preview", preview);
 
-    this.setState({
-      preview
+    // encode
+    function getBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+    }
+
+    getBase64(file).then(base64Image => {
+      this.setState({
+        preview,
+        image: base64Image
+      });
     });
   }
 
@@ -80,7 +109,7 @@ class Write extends Component {
 
     createArticle({
       variables: {
-        image: "small.jpg",
+        image: this.state.image,
         content: renderedHTML,
         title: this.state.title
       }
