@@ -5,7 +5,7 @@ import gql from "graphql-tag"
 import { Query, Mutation } from "react-apollo"
 import { Flex, Box } from "reflexbox"
 
-import BlogCard from "./components/BlogCard"
+import BlogCard from "../components/BlogCard"
 
 // 1. list all articles - query
 const LIST_ARTICLES_QUERY = gql`
@@ -35,7 +35,7 @@ const Cursor = styled.div`
   cursor: pointer;
 `
 
-class Blog extends Component {
+class Edit extends Component {
   render() {
     return (
       <Query query={LIST_ARTICLES_QUERY}>
@@ -53,7 +53,7 @@ class Blog extends Component {
               <br />
 
               {allArticles.map(article => (
-                <BlogCard article={article} allowEdit={false} />
+                <BlogCard article={article} allowEdit={true} />
               ))}
             </Everything>
           )
@@ -62,4 +62,4 @@ class Blog extends Component {
     )
   }
 }
-export default Blog
+export default Edit
