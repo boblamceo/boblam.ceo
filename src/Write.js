@@ -25,7 +25,6 @@ const TextEditor = styled.div`
   border-radius: 5px;
   width: 400px;
 `
-
 // 2. create an article - mutation
 const CREATE_ARTICLE_MUTATION = gql`
   mutation($title: String!, $image: String, $content: String) {
@@ -147,7 +146,11 @@ class Write extends Component {
     if (!isAuthenticated) {
       return (
         <div>
-          <input type="password" onChange={this.onPasswordChange} />
+          <Input
+            type="password"
+            onChange={this.onPasswordChange}
+            placeholder="password"
+          />
           <button onClick={this.checkPassword}>enter</button>
         </div>
       )
@@ -181,12 +184,13 @@ class Write extends Component {
                   editorState={editorState}
                   onChange={this.onChange}
                 />
-                <Input
+                <input
                   focus
                   placeholder="Title..."
                   onChange={this.onTitleChange}
                   value={this.state.title}
                   fluid
+                  style="margin: 7px;"
                 />
                 <Button
                   content="Submit"
