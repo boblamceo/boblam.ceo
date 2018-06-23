@@ -149,7 +149,7 @@ class Write extends Component {
           <Input
             type="password"
             onChange={this.onPasswordChange}
-            placeholder="password"
+            placeholder="password for write.js"
           />
           <button onClick={this.checkPassword}>enter</button>
         </div>
@@ -184,13 +184,13 @@ class Write extends Component {
                   editorState={editorState}
                   onChange={this.onChange}
                 />
-                <input
+                <Input
                   focus
                   placeholder="Title..."
                   onChange={this.onTitleChange}
                   value={this.state.title}
                   fluid
-                  style="margin: 7px;"
+                  style={{ margin: '7px 7px 7px 1px' }}
                 />
                 <Button
                   content="Submit"

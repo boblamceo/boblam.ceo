@@ -7,7 +7,8 @@ import { Flex, Box } from "reflexbox"
 
 import BlogCard from "../components/BlogCard"
 
-// 1. list all articles - query
+const PASSWORD = "boblam.ceo"
+
 const LIST_ARTICLES_QUERY = gql`
   query {
     allArticles {
@@ -34,6 +35,40 @@ const Everything = styled.div`
 const Cursor = styled.div`
   cursor: pointer;
 `
+
+// onPasswordChange = e => {
+//   const password = e.target.value
+//   this.setState({
+//     password,
+//   })
+// }
+//
+// checkPassword = () => {
+//   const isVisited = this.state.password === PASSWORD
+//
+//   if (!isVisited) {
+//     alert('there is no escape!! =D')
+//   }
+//
+//   this.setState({
+//     isVisited,
+//   })
+// }
+//
+// render() {
+//   const { editorState, isVisited } = this.state
+//   if (!isVisited) {
+//     return (
+//       <div>
+//         <Input
+//           type="password"
+//           onChange={this.onPasswordChange}
+//           placeholder="password for edit.js"
+//         />
+//         <button onClick={this.checkPassword}>enter</button>
+//       </div>
+//     )
+//   }
 
 class Edit extends Component {
   render() {
