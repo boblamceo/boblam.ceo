@@ -23,6 +23,12 @@ const Title = styled.h3`
 const Cursor = styled.div`
   cursor: pointer;
 `
+/*|----------------|                 
+   |     |     |    |
+   |                |
+   |      ------    |
+   |----------------|
+                     */
 
 const confirmDelete = (mutation, articleId) => {
   /* eslint-disable no-restricted-globals */
