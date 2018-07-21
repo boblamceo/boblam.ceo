@@ -5,7 +5,7 @@ import gql from "graphql-tag"
 import { Query, Mutation } from "react-apollo"
 import { Flex, Box } from "reflexbox"
 
-import BlogCard from "./components/BlogCard"
+import BlogCard from "../components/BlogCard"
 
 // 1. list all articles - query
 const LIST_ARTICLES_QUERY = gql`

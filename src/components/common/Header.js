@@ -1,10 +1,9 @@
 import React from "react";
-
 import styled from "styled-components";
-
-import profilePic from "./images/profile-pic2.jpg";
-import bg from "./images/bg.jpg";
 import { Image } from "semantic-ui-react";
+
+import profilePic from "../../images/profile-pic2.jpg";
+import bg from "../../images/bg.jpg";
 
 const Layout = styled.div`
   padding: 1em;
