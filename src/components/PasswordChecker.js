@@ -1,5 +1,6 @@
 // ignore-prettier
-import { Component } from 'react'
+import React, { Component } from 'react'
+import { Input } from 'semantic-ui-react'
 
 const PASSWORD = 'boblam.ceo'
 
@@ -17,6 +18,9 @@ class PasswordChecker extends Component {
 
   checkPassword = () => {
     const isAuthenticated = this.state.password === PASSWORD
+    this.setState({
+      isAuthenticated
+    })
   }
 
   render() {

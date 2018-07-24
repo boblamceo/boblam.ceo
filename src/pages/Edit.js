@@ -7,6 +7,8 @@ import { Flex, Box } from "reflexbox"
 
 import BlogCard from "../components/BlogCard"
 
+import PasswordChecker from '../components/PasswordChecker'
+
 const PASSWORD = "boblam.ceo"
 
 const LIST_ARTICLES_QUERY = gql`
@@ -36,64 +38,33 @@ const Cursor = styled.div`
   cursor: pointer;
 `
 
-// onPasswordChange = e => {
-//   const password = e.target.value
-//   this.setState({
-//     password,
-//   })
-// }
-//
-// checkPassword = () => {
-//   const isVisited = this.state.password === PASSWORD
-//
-//   if (!isVisited) {
-//     alert('there is no escape!! =D')
-//   }
-//
-//   this.setState({
-//     isVisited,
-//   })
-// }
-//
-// render() {
-//   const { editorState, isVisited } = this.state
-//   if (!isVisited) {
-//     return (
-//       <div>
-//         <Input
-//           type="password"
-//           onChange={this.onPasswordChange}
-//           placeholder="password for edit.js"
-//         />
-//         <button onClick={this.checkPassword}>enter</button>
-//       </div>
-//     )
-//   }
 
 class Edit extends Component {
   render() {
     return (
-      <Query query={LIST_ARTICLES_QUERY}>
-        {({ loading, error, data }) => {
-          if (loading || !data) {
-            return <div>Loading...</div>
-          }
+      <PasswordChecker>
+        <Query query={LIST_ARTICLES_QUERY}>
+          {({ loading, error, data }) => {
+            if (loading || !data) {
+              return <div>Loading...</div>
+            }
 
-          const { allArticles } = data
+            const { allArticles } = data
 
-          console.log(allArticles)
+            console.log(allArticles)
 
-          return (
-            <Everything>
-              <br />
+            return (
+              <Everything>
+                <br />
 
-              {allArticles.map(article => (
-                <BlogCard article={article} allowEdit={true} />
-              ))}
-            </Everything>
-          )
-        }}
-      </Query>
+                {allArticles.map(article => (
+                  <BlogCard article={article} allowEdit={true} />
+                ))}
+              </Everything>
+            )
+          }}
+        </Query>
+      </PasswordChecker>
     )
   }
 }
