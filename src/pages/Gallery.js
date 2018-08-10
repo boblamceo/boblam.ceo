@@ -19,6 +19,11 @@ import anothervideo from "../videos/teakwando.mp4";
 import intro from "../videos/intro-to-this-place.mp4";
 import yoga from "../videos/yoga.mp4";
 import teaching from "../videos/teaching.mp4";
+import terminal from "../videos/terminal.mp4"
+import terminalAgain from "../videos/terminal-again.mp4"
+import learningRobot from "../images/learning-robotics.jpg"
+import arduino from "../videos/arduino.mp4"
+import testing from "../images/testing.jpg"
 
 const IMAGE_WIDTH = 350;
 
@@ -38,7 +43,14 @@ const Gallery = () => (
 
     <h1>Robotics</h1>
     <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
-
+    <br />
+    <img src={learningRobot} width={`${IMAGE_WIDTH}px`} />
+    <br />
+    <video>
+      <source src={arduino} width={`${IMAGE_WIDTH}px`} />
+    </video>
+    <br />
+     <img src={testing} width={`${IMAGE_WIDTH}px`} />
     <br />
 
     <h1>Secret stuff</h1>
@@ -113,6 +125,14 @@ const Gallery = () => (
 
     <video width="30%" controls>
       <source src={avideo} type="video/mp4" />
+    </video>
+    <br />
+    <video>
+      <source src={terminal} width={`${IMAGE_WIDTH}px`} />
+    </video>
+    <br />
+    <video>
+      <source src={terminalAgain} width={`${IMAGE_WIDTH}px`} />
     </video>
   </Everything>
 );
