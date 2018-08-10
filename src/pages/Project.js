@@ -7,6 +7,11 @@ const Everything = styled.div`
   margin: auto auto;
 `;
 
+const ExtraFonts = styled.div`
+  color: red;
+  font-family: 'Hanalei Fill', cursive;
+`
+
 const Project = () => (
   <Everything>
     <Table definition>
@@ -26,11 +31,11 @@ const Project = () => (
         </Table.Row>
         <Table.Row>
           <Table.Cell>My second project</Table.Cell>
-          <Table.Cell>I'm working on it.</Table.Cell>
-          <Table.Cell>
+          <Table.Cell>I'm working on it. 🤯</Table.Cell>
+          <ExtraFonts>
             Any idea for me? I got no idea what to write. If you know, please
-            email me (boblam.ceo@gmail.com).
-          </Table.Cell>
+            email me (boblam.ceo@gmail.com).🚩
+          </ExtraFonts>
         </Table.Row>
       </Table.Body>
     </Table>
