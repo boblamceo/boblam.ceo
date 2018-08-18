@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Iframe from "react-iframe";
 
+import Iframe from "react-iframe";
+import GalleryFromImport from 'react-photo-gallery';
+import { DefaultPlayer as Video } from 'react-html5video';
+import 'react-html5video/dist/styles.css';
 
 import certificate from "../images/certificate-of-participation.png";
 import me from "../images/me-doing-the-computer.jpg";
@@ -34,22 +37,29 @@ const Everything = styled.div`
   flex-direction: column;
 `;
 
+
 const Gallery = () => (
   <Everything>
+    <br />
     <h1>Bloomberg Certificate</h1>
     <img src={certificate} width={`${IMAGE_WIDTH}px`} />
 
     <br />
 
     <h1>Robotics</h1>
-    <img src={r2d2} width={`${IMAGE_WIDTH}px`} />
-    <br />
-    <img src={learningRobot} width={`${IMAGE_WIDTH}px`} />
-    <br />
-    <video src={arduino} width={`${IMAGE_WIDTH}px`} />
-    <br />
-     <img src={testing} width={`${IMAGE_WIDTH}px`} />
-    <br />
+    <GalleryFromImport style={{
+      maxWidth: '768px'
+    }} photos={[
+      { src: r2d2, width: 4, height: 3 },
+      { src: learningRobot, width: 3, height: 4 },
+      { src: testing, width: 3, height: 4 },
+    ]} />
+
+    <Video autoPlay loop muted
+      controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+      >
+      <source src={arduino} type="video/mp4" />
+  </Video>
 
     <h1>Secret stuff</h1>
 
