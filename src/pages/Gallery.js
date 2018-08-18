@@ -46,9 +46,7 @@ const Gallery = () => (
     <br />
     <img src={learningRobot} width={`${IMAGE_WIDTH}px`} />
     <br />
-    <video>
-      <source src={arduino} width={`${IMAGE_WIDTH}px`} />
-    </video>
+    <video src={arduino} width={`${IMAGE_WIDTH}px`} />
     <br />
      <img src={testing} width={`${IMAGE_WIDTH}px`} />
     <br />
@@ -61,9 +59,7 @@ const Gallery = () => (
 
     <h1>Chinese</h1>
 
-    <video width="30%" controls>
-      <source src={video} type="video/mp4" />
-    </video>
+    <video width="30%" controls src={video} type="video/mp4" />
 
     <br />
 
@@ -73,9 +69,7 @@ const Gallery = () => (
 
     <br />
 
-    <video width="30%" controls>
-      <source src={anothervideo} type="video/mp4" />
-    </video>
+    <video width="30%" controls src={anothervideo} type="video/mp4" />
 
     <br />
 
@@ -89,15 +83,11 @@ const Gallery = () => (
 
     <br />
 
-    <video width="30%" controls>
-      <source src={intro} type="video/mp4" />
-    </video>
+    <video width="30%" controls src={intro} type="video/mp4" />
 
     <br />
 
-    <video width="30%" controls>
-      <source src={firstGuy} type="video/mp4" />
-    </video>
+    <video width="30%" controls src={firstGuy} type="video/mp4" />
 
     <br />
 
@@ -105,9 +95,7 @@ const Gallery = () => (
 
     <h1>Yoga</h1>
 
-    <video width="70%" controls>
-      <source src={yoga} type="video/mp4" />
-    </video>
+    <video width="70%" controls src={yoga} type="video/mp4" />
 
     <br />
 
@@ -117,23 +105,16 @@ const Gallery = () => (
 
     <br />
 
-    <video width="30%" controls>
-      <source src={teaching} type="video/mp4" />
-    </video>
+    <video width="30%" controls="true" src={teaching} type="video/mp4" />
 
     <br />
 
-    <video width="30%" controls>
-      <source src={avideo} type="video/mp4" />
-    </video>
+    <video width="30%" controls src={avideo} type="video/mp4" />
+
     <br />
-    <video>
-      <source src={terminal} width={`${IMAGE_WIDTH}px`} />
-    </video>
+    <video src={terminal} width={`${IMAGE_WIDTH}px`} />
     <br />
-    <video>
-      <source src={terminalAgain} width={`${IMAGE_WIDTH}px`} />
-    </video>
+    <video src={terminalAgain} width={`${IMAGE_WIDTH}px`} />
   </Everything>
 );
 export default Gallery;
