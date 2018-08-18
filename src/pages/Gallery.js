@@ -56,7 +56,12 @@ const Gallery = () => (
     ]} />
 
     <Video autoPlay loop muted
-      controls={['PlayPause', 'Seek', 'Time', 'Volume', 'Fullscreen']}
+      controls={['PlayPause']}
+      style = {
+        {
+          width: '200px'
+        }
+      }
       >
       <source src={arduino} type="video/mp4" />
   </Video>
@@ -85,18 +90,22 @@ const Gallery = () => (
 
     <h1>Climbing Mountain</h1>
 
-    <img src={smile} width={`${IMAGE_WIDTH}px`} />
-
-    <br />
-
-    <img src={weather} width={`${IMAGE_WIDTH}px`} />
-
-    <br />
-
-    <video width="30%" controls src={intro} type="video/mp4" />
-
-    <br />
-
+    <GalleryFromImport style={{
+      maxWidth: '768px'
+    }} photos={[
+      { src: smile, width: 3, height: 4 },
+      { src: weather, width: 3, height: 4 },
+    ]} />
+    <Video autoPlay loop muted
+      controls={['PlayPause']}
+      style = {
+        {
+          width: '200px'
+        }
+      }
+      >
+        <source src={intro} type="video/mp4" />
+        </Video>
     <video width="30%" controls src={firstGuy} type="video/mp4" />
 
     <br />
