@@ -66,6 +66,17 @@ const Gallery = () => (
       <source src={arduino} type="video/mp4" />
   </Video>
 
+  <Video autoPlay loop muted
+    controls={['PlayPause']}
+    style = {
+      {
+        width: '200px'
+      }
+    }
+    >
+    <source src={terminal} type="video/mp4" />
+</Video>
+
     <h1>Secret stuff</h1>
 
     <img src={seceret} width={`${IMAGE_WIDTH}px`} />
