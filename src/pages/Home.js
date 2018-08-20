@@ -108,7 +108,7 @@ class Page extends PureComponent {
             <Card.Content>
               <Card.Header>What I am intrested at?</Card.Header>
               <Textt>
-                I'm intrested at art, computer sience, sience, robots and
+                I'm intrested at art, computer science, science, robots and
                 electronics.
               </Textt>
             </Card.Content>
