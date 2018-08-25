@@ -15,7 +15,7 @@ import r2d2 from "../images/r2d2.jpg";
 import firstGuy from "../images/first-guy-on-here.jpg";
 import smile from "../images/smile-on-mountain.jpg";
 import weather from "../images/checking-the-weather.jpg";
-
+import MediaScroll from '../components/common/MediaScroll'
 import video from "../videos/99.mp4";
 import avideo from "../videos/90.mp4";
 import anothervideo from "../videos/teakwando.mp4";
@@ -47,35 +47,9 @@ const Gallery = () => (
     <br />
 
     <h1>Robotics</h1>
-    <GalleryFromImport style={{
-      maxWidth: '768px'
-    }} photos={[
-      { src: r2d2, width: 4, height: 3 },
-      { src: learningRobot, width: 3, height: 4 },
-      { src: testing, width: 3, height: 4 },
-    ]} />
 
-    <Video autoPlay loop muted
-      controls={['PlayPause']}
-      style = {
-        {
-          width: '200px'
-        }
-      }
-      >
-      <source src={arduino} type="video/mp4" />
-  </Video>
 
-  <Video autoPlay loop muted
-    controls={['PlayPause']}
-    style = {
-      {
-        width: '200px'
-      }
-    }
-    >
-    <source src={terminal} type="video/mp4" />
-</Video>
+    <MediaScroll images={[learningRobot, arduino, terminal, testing, testing]} />
 
     <h1>Secret stuff</h1>
 
@@ -106,6 +80,8 @@ const Gallery = () => (
     }} photos={[
       { src: smile, width: 3, height: 4 },
       { src: weather, width: 3, height: 4 },
+      { src: firstGuy, width: 4, height: 3 },
+      { src: back, width: 3, height: 4 },
     ]} />
     <Video autoPlay loop muted
       controls={['PlayPause']}
@@ -117,11 +93,7 @@ const Gallery = () => (
       >
         <source src={intro} type="video/mp4" />
         </Video>
-    <video width="30%" controls src={firstGuy} type="video/mp4" />
-
     <br />
-
-    <img src={back} width={`${IMAGE_WIDTH}px`} />
 
     <h1>Yoga</h1>
 
@@ -131,7 +103,9 @@ const Gallery = () => (
 
     <h1>Coding</h1>
 
-    <img src={me} width={`${IMAGE_WIDTH}px`} />
+    <GalleryFromImport photos={[
+      { src: me, width: 3, height: 4 },
+    ]} />
 
     <br />
 

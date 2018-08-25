@@ -4,7 +4,10 @@ import { Input, Menu as MainMenu } from "semantic-ui-react"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import { withRouter } from "react-router"
 
-const Everything = styled.div``
+const Everything = styled.div`
+  width: 100%;
+`
+
 const Text = styled.a`
   color: lightgreen;
 `
