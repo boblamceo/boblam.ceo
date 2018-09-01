@@ -5,8 +5,7 @@ import { DefaultPlayer as Video } from 'react-html5video';
 
 const Card = styled.section`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  
 
   flex-wrap: nowrap;
 
@@ -24,7 +23,6 @@ const Card = styled.section`
 
 const CardContent = styled.div`
   padding: 0.25em;
-  flex: 0 0 auto;
 `
 
 const Image = styled.img`
@@ -47,7 +45,6 @@ const MediaScroll = ({images = []}) => {
                   </video>
                 )
               }
-
             </CardContent>
           )
 

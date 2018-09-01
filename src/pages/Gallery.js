@@ -28,13 +28,17 @@ import learningRobot from "../images/learning-robotics.jpg"
 import arduino from "../videos/arduino.mp4"
 import testing from "../images/testing.jpg"
 
-const IMAGE_WIDTH = 350;
+const IMAGE_WIDTH = 500;
 
 const Everything = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 
@@ -59,7 +63,7 @@ const Gallery = () => (
 
     <h1>Chinese</h1>
 
-    <video width="30%" controls src={video} type="video/mp4" />
+    <video width={`${IMAGE_WIDTH}px`} controls src={video} type="video/mp4" />
 
     <br />
 
@@ -75,7 +79,7 @@ const Gallery = () => (
 
     <h1>Yoga</h1>
 
-    <video width="70%" controls src={yoga} type="video/mp4" />
+    <video width={`${IMAGE_WIDTH}px`} controls src={yoga} type="video/mp4" />
 
     <br />
 
@@ -85,4 +89,3 @@ const Gallery = () => (
   </Everything>
 );
 export default Gallery;
- 
