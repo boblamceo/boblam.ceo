@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import ImageZoom from 'react-medium-image-zoom'
 
 import Iframe from "react-iframe";
 import GalleryFromImport from 'react-photo-gallery';
 import { DefaultPlayer as Video } from 'react-html5video';
 import 'react-html5video/dist/styles.css';
+import { Button, Modal } from 'semantic-ui-react'
 
 import certificate from "../images/certificate-of-participation.png";
 import me from "../images/me-doing-the-computer.jpg";
@@ -27,6 +29,7 @@ import terminalAgain from "../videos/terminal-again.mp4"
 import learningRobot from "../images/learning-robotics.jpg"
 import arduino from "../videos/arduino.mp4"
 import testing from "../images/testing.jpg"
+import VideoModal from "../components/common/VideoModal"
 
 const IMAGE_WIDTH = 500;
 
@@ -46,24 +49,34 @@ const Gallery = () => (
   <Everything>
     <br />
     <h1>Bloomberg Certificate</h1>
-    <img src={certificate} width={`${IMAGE_WIDTH}px`} />
+    <ImageZoom
+       image={{
+         src: certificate,
+         className: 'img',
+         width: `${IMAGE_WIDTH}px`
+       }}
+       zoomImage={{
+         src: certificate,
+       }}
+     />
 
     <br />
 
     <h1>Robotics</h1>
 
-
     <MediaScroll images={[learningRobot, arduino, terminal, testing]} />
 
     <h1>Secret stuff</h1>
 
-    <img src={seceret} width={`${IMAGE_WIDTH}px`} />
+    <ImageZoom image={{src:seceret, className: 'img', width:`${IMAGE_WIDTH}px`}} />
 
     <br />
 
     <h1>Chinese</h1>
 
-    <video width={`${IMAGE_WIDTH}px`} controls src={video} type="video/mp4" />
+    <VideoModal width={`300px`}>
+      <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={video} type="video/mp4" />
+    </VideoModal>
 
     <br />
 
@@ -78,9 +91,9 @@ const Gallery = () => (
     <MediaScroll images={[smile, firstGuy, back, intro]} />
 
     <h1>Yoga</h1>
-
-    <video width={`${IMAGE_WIDTH}px`} controls src={yoga} type="video/mp4" />
-
+    <VideoModal>
+      <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={yoga} type="video/mp4" />
+      </VideoModal>
     <br />
 
     <h1>Coding</h1>
