@@ -30,6 +30,9 @@ import learningRobot from "../images/learning-robotics.jpg"
 import arduino from "../videos/arduino.mp4"
 import testing from "../images/testing.jpg"
 import VideoModal from "../components/common/VideoModal"
+import circle from "../videos/circle-around-building.MOV"
+import tencentSign from "../images/me-near-tencent-sign.jpg"
+import building from "../images/tencent-building.jpg"
 
 const IMAGE_WIDTH = 375;
 
@@ -99,6 +102,10 @@ const Gallery = () => (
     <h1>Coding</h1>
 
     <MediaScroll images={[teaching, avideo, me, terminalAgain]} />
+
+    <h1>Tencent</h1>
+
+    <MediaScroll images={[circle, tencentSign, building]} />
   </Everything>
 );
 export default Gallery;
