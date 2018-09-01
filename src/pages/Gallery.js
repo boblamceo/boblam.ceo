@@ -49,7 +49,7 @@ const Gallery = () => (
     <h1>Robotics</h1>
 
 
-    <MediaScroll images={[learningRobot, arduino, terminal, testing, testing]} />
+    <MediaScroll images={[learningRobot, arduino, terminal, testing]} />
 
     <h1>Secret stuff</h1>
 
@@ -65,35 +65,13 @@ const Gallery = () => (
 
     <h1>Teakwando</h1>
 
-    <img src={champion} width={`${IMAGE_WIDTH}px`} />
-
-    <br />
-
-    <video width="30%" controls src={anothervideo} type="video/mp4" />
+    <MediaScroll images={[anothervideo, champion]} />
 
     <br />
 
     <h1>Climbing Mountain</h1>
 
-    <GalleryFromImport style={{
-      maxWidth: '768px'
-    }} photos={[
-      { src: smile, width: 3, height: 4 },
-      { src: weather, width: 3, height: 4 },
-      { src: firstGuy, width: 4, height: 3 },
-      { src: back, width: 3, height: 4 },
-    ]} />
-    <Video autoPlay loop muted
-      controls={['PlayPause']}
-      style = {
-        {
-          width: '200px'
-        }
-      }
-      >
-        <source src={intro} type="video/mp4" />
-        </Video>
-    <br />
+    <MediaScroll images={[smile, firstGuy, back, intro]} />
 
     <h1>Yoga</h1>
 
@@ -103,22 +81,8 @@ const Gallery = () => (
 
     <h1>Coding</h1>
 
-    <GalleryFromImport photos={[
-      { src: me, width: 3, height: 4 },
-    ]} />
-
-    <br />
-
-    <video width="30%" controls="true" src={teaching} type="video/mp4" />
-
-    <br />
-
-    <video width="30%" controls src={avideo} type="video/mp4" />
-
-    <br />
-    <video src={terminal} width={`${IMAGE_WIDTH}px`} />
-    <br />
-    <video src={terminalAgain} width={`${IMAGE_WIDTH}px`} />
+    <MediaScroll images={[teaching, avideo, me, terminalAgain]} />
   </Everything>
 );
 export default Gallery;
+ 
