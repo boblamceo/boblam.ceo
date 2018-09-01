@@ -31,7 +31,7 @@ import arduino from "../videos/arduino.mp4"
 import testing from "../images/testing.jpg"
 import VideoModal from "../components/common/VideoModal"
 
-const IMAGE_WIDTH = 500;
+const IMAGE_WIDTH = 375;
 
 const Everything = styled.div`
   display: flex;

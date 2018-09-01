@@ -27,7 +27,8 @@ class VideoModal extends PureComponent {
             children,
             {
               style: {
-                width
+                width,
+                cursor: 'zoom-in'
               },
               muted: true
             }
