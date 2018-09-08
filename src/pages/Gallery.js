@@ -67,18 +67,18 @@ const Gallery = () => (
 
     <h1>Robotics</h1>
 
-    <MediaScroll images={[learningRobot, arduino, terminal]} />
+    <MediaScroll images={[learningRobot, arduino, terminal, testing]} />
+
+    <h1>Secret stuff</h1>
+
+    <ImageZoom image={{src:seceret, className: 'img', width:`${IMAGE_WIDTH}px`}} />
+
+    <br />
 
     {
       /*
 
-<MediaScroll images={[learningRobot, arduino, terminal, testing]} />
 
-      <h1>Secret stuff</h1>
-
-      <ImageZoom image={{src:seceret, className: 'img', width:`${IMAGE_WIDTH}px`}} />
-
-      <br />
 
       <h1>Chinese</h1>
 

@@ -30,7 +30,8 @@ class VideoModal extends PureComponent {
                 width,
                 cursor: 'zoom-in'
               },
-              muted: true
+              muted: true,
+              controls: true
             }
           )
         }
