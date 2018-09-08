@@ -75,18 +75,16 @@ const Gallery = () => (
 
     <br />
 
+    <h1>Chinese</h1>
+
+    <VideoModal width={`300px`}>
+      <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={video} type="video/mp4" />
+    </VideoModal>
+
+    <br />
+
     {
       /*
-
-
-
-      <h1>Chinese</h1>
-
-      <VideoModal width={`300px`}>
-        <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={video} type="video/mp4" />
-      </VideoModal>
-
-      <br />
 
       <h1>Teakwando</h1>
 
