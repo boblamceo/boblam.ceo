@@ -67,7 +67,7 @@ const Gallery = () => (
 
     <h1>Robotics</h1>
 
-    <MediaScroll images={[learningRobot, arduino]} />
+    <MediaScroll images={[learningRobot, arduino, terminal]} />
 
     {
       /*
