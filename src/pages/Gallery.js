@@ -93,23 +93,19 @@ const Gallery = () => (
 
     <MediaScroll images={[smile, firstGuy, back, intro]} />
 
-    {
-      /*
+    <h1>Yoga</h1>
+    <VideoModal>
+      <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={yoga} type="video/mp4" />
+      </VideoModal>
+    <br />
 
-      <h1>Yoga</h1>
-      <VideoModal>
-        <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={yoga} type="video/mp4" />
-        </VideoModal>
-      <br />
+    <h1>Coding</h1>
 
-      <h1>Coding</h1>
+    <MediaScroll images={[teaching, avideo, me, terminalAgain]} />
 
-      <MediaScroll images={[teaching, avideo, me, terminalAgain]} />
+    <h1>Tencent</h1>
 
-      <h1>Tencent</h1>
-
-      <MediaScroll images={[circle, tencentSign, building]} />
-      */
+    <MediaScroll images={[circle, tencentSign, building]} />
     }
 
 
