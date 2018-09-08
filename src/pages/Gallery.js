@@ -83,18 +83,18 @@ const Gallery = () => (
 
     <br />
 
+    <h1>Teakwando</h1>
+
+    <MediaScroll images={[anothervideo, champion]} />
+
+    <br />
+
+    <h1>Climbing Mountain</h1>
+
+    <MediaScroll images={[smile, firstGuy, back, intro]} />
+
     {
       /*
-
-      <h1>Teakwando</h1>
-
-      <MediaScroll images={[anothervideo, champion]} />
-
-      <br />
-
-      <h1>Climbing Mountain</h1>
-
-      <MediaScroll images={[smile, firstGuy, back, intro]} />
 
       <h1>Yoga</h1>
       <VideoModal>

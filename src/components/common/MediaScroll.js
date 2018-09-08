@@ -52,9 +52,9 @@ const MediaScroll = ({images = []}) => {
                   imageElement
                 ) : (
                   <VideoModal>
-                    <video autoPlay loop height="400px">
+                    <Video autoPlay loop height="400px">
                       <source src={src} type="video/mp4" />
-                    </video>
+                    </Video>
                   </VideoModal>
                 )
               }
