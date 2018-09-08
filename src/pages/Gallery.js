@@ -67,45 +67,54 @@ const Gallery = () => (
 
     <h1>Robotics</h1>
 
-    <MediaScroll images={[learningRobot, arduino, terminal, testing]} />
+    <MediaScroll images={[learningRobot, arduino]} />
 
-    <h1>Secret stuff</h1>
+    {
+      /*
 
-    <ImageZoom image={{src:seceret, className: 'img', width:`${IMAGE_WIDTH}px`}} />
+<MediaScroll images={[learningRobot, arduino, terminal, testing]} />
 
-    <br />
+      <h1>Secret stuff</h1>
 
-    <h1>Chinese</h1>
+      <ImageZoom image={{src:seceret, className: 'img', width:`${IMAGE_WIDTH}px`}} />
 
-    <VideoModal width={`300px`}>
-      <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={video} type="video/mp4" />
-    </VideoModal>
+      <br />
 
-    <br />
+      <h1>Chinese</h1>
 
-    <h1>Teakwando</h1>
-
-    <MediaScroll images={[anothervideo, champion]} />
-
-    <br />
-
-    <h1>Climbing Mountain</h1>
-
-    <MediaScroll images={[smile, firstGuy, back, intro]} />
-
-    <h1>Yoga</h1>
-    <VideoModal>
-      <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={yoga} type="video/mp4" />
+      <VideoModal width={`300px`}>
+        <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={video} type="video/mp4" />
       </VideoModal>
-    <br />
 
-    <h1>Coding</h1>
+      <br />
 
-    <MediaScroll images={[teaching, avideo, me, terminalAgain]} />
+      <h1>Teakwando</h1>
 
-    <h1>Tencent</h1>
+      <MediaScroll images={[anothervideo, champion]} />
 
-    <MediaScroll images={[circle, tencentSign, building]} />
+      <br />
+
+      <h1>Climbing Mountain</h1>
+
+      <MediaScroll images={[smile, firstGuy, back, intro]} />
+
+      <h1>Yoga</h1>
+      <VideoModal>
+        <video width={`${IMAGE_WIDTH}px`} autoPlay loop src={yoga} type="video/mp4" />
+        </VideoModal>
+      <br />
+
+      <h1>Coding</h1>
+
+      <MediaScroll images={[teaching, avideo, me, terminalAgain]} />
+
+      <h1>Tencent</h1>
+
+      <MediaScroll images={[circle, tencentSign, building]} />
+      */
+    }
+
+
   </Everything>
 );
 export default Gallery;
