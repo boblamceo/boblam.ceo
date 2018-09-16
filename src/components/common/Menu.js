@@ -23,7 +23,7 @@ const Navigation = withRouter(props => {
         <MainMenu.Item name="Projects" active={pathname === "/projects"} />
       </Link>
       <Link to="/gallery">
-        <MainMenu.Item name="Gallery" active={pathname === "/gallery"} />
+        <MainMenu.Item name="Scrollable Gallery" active={pathname === "/gallery"} />
       </Link>
       <Link to="/blog">
         <MainMenu.Item name="Blog" active={pathname === "/blog"} />

@@ -33,6 +33,16 @@ import VideoModal from "../components/common/VideoModal"
 import circle from "../videos/circle-around-building.MOV"
 import tencentSign from "../images/me-near-tencent-sign.jpg"
 import building from "../images/tencent-building.jpg"
+import sign from "../images/sign.jpg"
+import gregor from "../images/gregor.jpg"
+import floor from "../images/99.jpg"
+import dave from "../images/dave.jpg"
+import dummy from "../images/dummy.jpg"
+import heidi from "../images/heidi.jpg"
+import jeff from "../images/jeff.jpg"
+import micheal from "../images/micheal.jpg"
+import oreo from "../images/oreo.jpg"
+import snatch from "../images/snatch.jpg"
 
 const IMAGE_WIDTH = 375;
 
@@ -106,7 +116,10 @@ const Gallery = () => (
     <h1>Tencent</h1>
 
     <MediaScroll images={[circle, tencentSign, building]} />
-    }
+
+    <h1>Credit Suisse talk</h1>
+
+    <MediaScroll images={[sign, gregor, floor, dave, dummy, heidi, jeff, micheal, oreo, snatch]}/>
 
 
   </Everything>
