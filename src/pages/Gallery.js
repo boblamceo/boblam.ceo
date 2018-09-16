@@ -117,7 +117,7 @@ const Gallery = () => (
 
     <MediaScroll images={[circle, tencentSign, building]} />
 
-    <h1>Credit Suisse talk</h1>
+    <h1>Credit Suisse talk <br /> <a href='https://docs.google.com/presentation/d/1WtEgGmaWEG_4eBHhEg-2GgwYiWxuDb5r62DyZ7t2MPI/edit#slide=id.p' target='_blank'>More about it</a></h1>
 
     <MediaScroll images={[sign, gregor, floor, dave, dummy, heidi, jeff, micheal, oreo, snatch]}/>
 
