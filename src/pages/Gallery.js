@@ -121,7 +121,9 @@ const Gallery = () => (
 
     <MediaScroll images={[sign, gregor, floor, dave, dummy, heidi, jeff, micheal, oreo, snatch]}/>
 
+    <h1>Flags(it is not only one picture) <br /> <a href='https://docs.google.com/presentation/d/1IsBlH76yB0DtBx2Jax4gJ1Fa2MSnkn_8xc6xQ91u6QU/edit'>More</a></h1>
 
+    <MediaScroll images={['https://cdn.shopify.com/s/files/1/1364/2399/files/american-flag-1600x600_cceecf00-c817-485b-a636-091b1d467fcc_2048x.jpg?v=1503383953', 'https://www.collinsflags.com/blog/wp-content/uploads/2013/09/British-Union-Jack-Flag.jpg']}/>
   </Everything>
 );
 export default Gallery;
