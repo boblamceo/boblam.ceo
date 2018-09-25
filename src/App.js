@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import styled from 'styled-components'
 
 import Header from "./components/common/Header";
 import Menu from "./components/common/Menu";
@@ -17,14 +18,25 @@ const client = new ApolloClient({
   uri: "https://api.graph.cool/simple/v1/cjfwgf3444jik0120rjd1hp62"
 });
 
+const Layout = styled.div`
+  min-height: 40vh;
+  background: url('/hero.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
         <Router>
           <div>
+          <Layout>
             <Menu />
             <Header />
+          </Layout>
 
             <br />
 

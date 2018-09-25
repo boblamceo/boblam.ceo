@@ -5,22 +5,13 @@ import { Image } from "semantic-ui-react";
 import profilePic from "../../images/profile-pic2.jpg";
 import bg from "../../images/bg.jpg";
 
-const Layout = styled.div`
-  padding: 1em;
-  height: 420px;
-
+const Wrapper = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
-  background: url('${bg}') no-repeat center center fixed;
-  background-size: cover;
-
-  @media (min-width: 700px) {
-    align-items: center;
-      height: 240px;
-  }
-`;
+  margin-bottom: 5em;
+`
 
 const ImageWrapper = styled.div`
   @media (min-width: 700px) {
@@ -30,24 +21,25 @@ const ImageWrapper = styled.div`
 
 const Header = styled.header`
   text-align: center;
-  color: red;
+  color: white;
 `;
 
-const SpecialHeader = styled.h2`
+const SpecialHeader = styled.h3`
   font-family: "Mina", sans-serif;
 `;
 
 const Page = () => (
-  <Layout>
+  <Wrapper>
     <Header>
       <SpecialHeader>Welcome to Bob Lam's Homework</SpecialHeader>
       <SpecialHeader>Bienvenido a la tarea de Bob Lam</SpecialHeader>
+      <SpecialHeader>歡迎來到林鴻博的網站</SpecialHeader>
       <SpecialHeader>欢迎来到林鸿博的网站</SpecialHeader>
     </Header>
     <ImageWrapper>
       <Image src={profilePic} size="small" circular />
     </ImageWrapper>
-  </Layout>
+  </Wrapper>
 );
 
 export default Page;
