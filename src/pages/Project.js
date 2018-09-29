@@ -42,6 +42,10 @@ const Project = () => (
           <Table.Cell>Tic Tac Toe</Table.Cell>
           <Table.Cell>To be continued...</Table.Cell>
         </Table.Row>
+        <Table.Row>
+          <Table.Cell>MediaScroll</Table.Cell>
+          <Table.Cell>To be continued...</Table.Cell>
+        </Table.Row>
       </Table.Body>
     </Table>
   </Everything>

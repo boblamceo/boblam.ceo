@@ -10,11 +10,14 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 5em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+
+  padding: 0 1.5em;
 `
 
 const ImageWrapper = styled.div`
-  @media (min-width: 700px) {
+  @media (min-width: 768px) {
     margin-left: 3em;
   }
 `;
@@ -24,8 +27,15 @@ const Header = styled.header`
   color: white;
 `;
 
-const SpecialHeader = styled.h3`
+const SpecialHeader = styled.div`
   font-family: "Mina", sans-serif;
+  font-size: 1.2em;
+
+  @media(min-width: 768px){
+    font-size: 1.4em;
+  }
+
+  padding: 0.5em 0;
 `;
 
 const Page = () => (

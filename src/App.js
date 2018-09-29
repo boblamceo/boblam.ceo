@@ -19,12 +19,16 @@ const client = new ApolloClient({
 });
 
 const Layout = styled.div`
-  min-height: 40vh;
+  min-height: 45vh;
+
+  @media (min-width: 768px) {
+    min-height: 35vh;
+  }
+
   background: url('/hero.jpg') no-repeat center center fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 class App extends Component {
@@ -33,10 +37,10 @@ class App extends Component {
       <ApolloProvider client={client}>
         <Router>
           <div>
-          <Layout>
-            <Menu />
-            <Header />
-          </Layout>
+            <Layout>
+              <Menu />
+              <Header />
+            </Layout>
 
             <br />
 
