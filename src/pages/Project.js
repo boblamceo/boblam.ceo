@@ -11,6 +11,9 @@ const ExtraFonts = styled.div`
   color: red;
   font-family: 'Hanalei Fill', cursive;
 `
+const Center = styled.div`
+  text-align: center;
+`
 
 const Project = () => (
   <Everything>
@@ -19,23 +22,25 @@ const Project = () => (
         <Table.Row>
           <Table.HeaderCell />
           <Table.HeaderCell>Showcase</Table.HeaderCell>
-          <Table.HeaderCell>Description</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
 
       <Table.Body>
         <Table.Row>
-          <Table.Cell>React Calculator</Table.Cell>
-          <Table.Cell>To be continued...</Table.Cell>
-          <Table.Cell>My first calculator program written in react</Table.Cell>
+          <Table.Cell>
+           <Center>
+            Vue Calculator
+           </Center>
+          </Table.Cell>
+          <Table.Cell>
+            <div>My first calculator program written in react</div>
+            <br />
+            <iframe src="/calculator.html" width="260" height="320" frameBorder="0"></iframe>
+          </Table.Cell>
         </Table.Row>
         <Table.Row>
-          <Table.Cell>My second project</Table.Cell>
-          <Table.Cell>I'm working on it. 🤯</Table.Cell>
-          <ExtraFonts>
-            Any idea for me? I got no idea what to write. If you know, please
-            email me (boblam.ceo@gmail.com).🚩
-          </ExtraFonts>
+          <Table.Cell>Tic Tac Toe</Table.Cell>
+          <Table.Cell>To be continued...</Table.Cell>
         </Table.Row>
       </Table.Body>
     </Table>
