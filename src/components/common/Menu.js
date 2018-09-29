@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { Input, Menu as MainMenu, Icon } from "semantic-ui-react"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import { withRouter } from "react-router"
+import MediaQuery from "react-responsive"
+import MobileMenu from "./MobileMenu"
 
 const Everything = styled.div`
   width: 100%;
@@ -37,31 +39,38 @@ const LinkedinIcon = styled.div`
   cursor: pointer;
 `
 
-const Navigation = withRouter(props => {
+const DesktopNavigation = withRouter(props => {
   const { pathname } = props.location
   return (
-      <MainMenu secondary style={{margin: 0}}>
-        <Link to="/">
-          <MainMenu.Item name="Home" style={{color:'white'}} active={pathname === "/"} />
-        </Link>
-        <Link to="/projects">
-          <MainMenu.Item name="Projects" style={{color:'white'}} active={pathname === "/projects"} />
-        </Link>
-        <Link to="/gallery">
-          <MainMenu.Item name="Scrollable Gallery" style={{color: 'white'}} active={pathname === "/gallery"} />
-        </Link>
-        <Link to="/blog">
-          <MainMenu.Item name="Blog" style={{color:'white'}} active={pathname === "/blog"} />
-        </Link>
-      </MainMenu>
+    <MainMenu secondary style={{margin: 0}}>
+      <Link to="/">
+        <MainMenu.Item name="Home" style={{color:'white'}} active={pathname === "/"} />
+      </Link>
+      <Link to="/projects">
+        <MainMenu.Item name="Projects" style={{color:'white'}} active={pathname === "/projects"} />
+      </Link>
+      <Link to="/gallery">
+        <MainMenu.Item name="Scrollable Gallery" style={{color: 'white'}} active={pathname === "/gallery"} />
+      </Link>
+      <Link to="/blog">
+        <MainMenu.Item name="Blog" style={{color:'white'}} active={pathname === "/blog"} />
+      </Link>
+    </MainMenu>
   )
 })
+
+const MobileNavigation = () => <MobileMenu />
 
 const Menu = () => {
   return (
       <Everything>
         <Flex>
-          <Navigation />
+          <MediaQuery query='(min-width: 769px)'>
+            <DesktopNavigation />
+          </MediaQuery>
+          <MediaQuery query="(max-width: 768px)">
+            <MobileNavigation />
+          </MediaQuery>
           <Flex>
             <a href='https://www.linkedin.com/in/bob-lam-755913162/' target='_blank'>
               <LinkedinIcon>
