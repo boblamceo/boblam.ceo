@@ -50,24 +50,39 @@ class Home extends PureComponent {
     state = {
         counter: 0,
         currentTime: '',
+        activity: 'Sleeping',
     }
 
     componentDidMount() {
-        this.ageInterval = setInterval(() => {
-            const age = checkYourAgeInYears('06/09/2010')
-
-            this.setState({
-                counter: age,
-                currentTime: `${new Date()}`,
-            })
+        this.interval = setInterval(() => {
+            this.setAge()
         }, 1000)
+        this.setActivity()
+    }
 
+    componentWillUnmount() {
+        clearInterval(this.interval)
+    }
+
+    setAge = () => {
+        const age = checkYourAgeInYears('06/09/2010')
+
+        this.setState({
+            counter: age,
+            currentTime: `${new Date()}`,
+        })
+    }
+
+    setActivity = () => {
         const BORED_API = 'https://www.boredapi.com/api/activity'
-
         axios
             .get(BORED_API)
             .then((res) => {
                 const { data } = res
+
+                this.setState({
+                    activity: data.activity,
+                })
 
                 console.log(data.type)
                 console.log(data.activity)
@@ -77,18 +92,15 @@ class Home extends PureComponent {
             .catch(console.error)
     }
 
-    componentWillUnmount() {
-        clearInterval(this.ageInterval)
-    }
-
     render() {
+        // later log console the remove Let's
         return (
             <Container>
                 <Grid>
                     <Card>
                         <Card.Content>
-                            <Card.Header>Daily things I do every day</Card.Header>
-                            <Daily />
+                            <Card.Header>Daily things my friends do every day</Card.Header>
+                            <Daily>{this.state.activity}</Daily>
                         </Card.Content>
                     </Card>
 
