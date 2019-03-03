@@ -6411,6 +6411,12 @@ react-event-listener@^0.6.2:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
+react-event-timeline@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/react-event-timeline/-/react-event-timeline-1.6.3.tgz#1be465a06f751e7814f3e3fb3173e09b6264b33e"
+  dependencies:
+    prop-types "^15.6.0"
+
 react-html5video@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/react-html5video/-/react-html5video-2.5.1.tgz#bbc4314be1d583cb991a11ca3480e70a3c964caf"
