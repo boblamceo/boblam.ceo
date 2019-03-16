@@ -76,6 +76,15 @@ class MobileMenu extends Component {
                                     />
                                 </Link>
                             </Menu.Item>
+                            <Menu.Item>
+                                <Link to='/code'>
+                                    <Menu.Item
+                                        name='Code'
+                                        active={pathname === '/code'}
+                                        onClick={this.handleSidebarHide}
+                                    />
+                                </Link>
+                            </Menu.Item>
                         </Menu>
                     </PaddingAdder>
                 </Drawer>
