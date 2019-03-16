@@ -14,6 +14,7 @@ import Blog from './pages/Blog'
 import Write from './pages/Write'
 import Edit from './pages/Edit'
 import Timeline from './pages/Timeline'
+import Code from './pages/Code'
 
 const client = new ApolloClient({
     uri: 'https://api.graph.cool/simple/v1/cjfwgf3444jik0120rjd1hp62',
@@ -50,6 +51,7 @@ class App extends Component {
                         <Route path='/blog' component={Blog} />
                         <Route path='/write' component={Write} />
                         <Route path='/edit' component={Edit} />
+                        <Route path='/code' component={Code} />
                     </div>
                 </Router>
             </ApolloProvider>
