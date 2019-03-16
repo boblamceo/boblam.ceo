@@ -49,10 +49,13 @@ const DesktopNavigation = withRouter((props) => {
                 <MainMenu.Item name='Projects' style={{ color: 'white' }} active={pathname === '/projects'} />
             </Link>
             <Link to='/gallery'>
-                <MainMenu.Item name='Scrollable Gallery' style={{ color: 'white' }} active={pathname === '/gallery'} />
+                <MainMenu.Item name='Gallery' style={{ color: 'white' }} active={pathname === '/gallery'} />
             </Link>
             <Link to='/blog'>
                 <MainMenu.Item name='Blog' style={{ color: 'white' }} active={pathname === '/blog'} />
+            </Link>
+            <Link to='/code'>
+                <MainMenu.Item name='Code' style={{ color: 'white' }} active={pathname === '/code'} />
             </Link>
         </MainMenu>
     )
